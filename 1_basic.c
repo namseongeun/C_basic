@@ -56,6 +56,67 @@ int main() {
 	- 특수문자 사용불가
 	*/
 
- 
+	// 변수의 자료형
+	// 정수형과 실수형 자료
+
+	// 1. 정수형 변수(char, short, int, long)
+	int age = 12;
+	// %d: 정수형 값을 출력하라는 뜻
+	printf("%d\n", age);
+	age = 13;
+	printf("%d\n", age);
+
+	// 문자
+	char string = 'A';
+	printf("%c\n", string);
+	// 문자열
+	char abc[12] = "Hello World";
+	printf("%s\n", abc);
+
+	// 2. 실수형 변수(float, double)
+	float f = 46.5f;
+	printf("%.2f\n", f);
+	double d = 4.428;
+	printf("%.2lf\n", d);
+
+
+	// 언더플로우와 오버플로우
+	char i = 127;
+	char j = 128;
+	unsigned char k = 255;
+	unsigned char l = 256;
+	unsinged char m = -1;
+
+	printf("%d, %d, %u, %u %u\n", i, j, k, l, m);
+
+
+	// 연산자
+	// 1.산술 연산자
+	int a = 5, b = 3;
+
+	int result1 = a+b;
+	int result2 = a-b;
+	int result3 = a*b;
+	int result4 = a/b;
+	int result5 = a%b ;
+	// 나눗셈의 경우 결과가 실수이려면 나누는 변수 자체가 실수여야 함.
+	// 즉, 정수끼리의 나눗셈 결과는 정수
+
+	printf("결과는 %d, %d, %d, %d, %d입니다.\n", result1, result2, result3, result4, result5);
+
+	// 2.복합대입 연산자
+	a = a + b;
+	printf("%d\n", a);
+	a += b;
+	printf("%d\n", a);
+
+	// 3.증감 연산자
+	int c = 10;
+	int d = (c--) + 2;
+	int e = (--c) + 2;
+
+	printf("d: %d\n", d);
+	printf("e: %d\n", e);
+
 	return 0;
 }
